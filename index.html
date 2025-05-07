@@ -6,14 +6,24 @@
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guitar Picker</title>
+    <script type="module" src="/src/main.js"></script>
 </head>
 
 <body>
     <div class="hero__bg">
         <div class="hero__slider">
             <div class="hero__slider-box">
-                <div class="hero__item">1</div>
-                <div class="hero__item">2</div>
+                <div class="hero__item">
+                    <input type="button" class="questionBtn" id="startBtn" value="Begin" onclick='changeItem()'>
+                </div>
+                <div class="hero__item">
+                    <div class="questionArea">
+                        <p class="question"></p>
+                        <div class="btnArea">
+                            <input type="button" class="questionBtn" id="startBtn" value="Ok" onclick='fQuestion0()'>
+                        </div>
+                    </div>
+                </div>
                 <div class="hero__item">3</div>
                 <!-- <button class="hero__button">Wybór#1</button>
                 <button class="hero__button">Wybór#2</button> -->
@@ -21,7 +31,8 @@
         </div>
         <div class="hero__shadow"></div>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <!-- <script type="module" src="/src/main.js"></script> -->
+
 </body>
 
 </html>
