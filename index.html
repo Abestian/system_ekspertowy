@@ -6,32 +6,25 @@
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guitar Picker</title>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js" defer></script>
 </head>
 
 <body>
-    <div class="hero__bg">
-        <div class="hero__slider">
-            <div class="hero__slider-box">
-                <div class="hero__item">
-                    <input type="button" class="questionBtn" id="startBtn" value="Begin" onclick='changeItem()'>
+    <div class="hero__background">
+        <div class="hero__container">
+            <h1 class="expert-system__title">System ekspertowy pomagający w wyborze gitary</h1>
+            <div class="expert-system__question-area">
+                <h2 class="expert-system__question">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+                    odit?
+                </h2>
+                <div class="expert-system__buttonArea">
+                    <input type="button" class="expert-system__button" value="Ok" onclick='fQuestion0()'>
                 </div>
-                <div class="hero__item">
-                    <div class="questionArea">
-                        <p class="question"></p>
-                        <div class="btnArea">
-                            <input type="button" class="questionBtn" id="startBtn" value="Ok" onclick='fQuestion0()'>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero__item">3</div>
-                <!-- <button class="hero__button">Wybór#1</button>
-                <button class="hero__button">Wybór#2</button> -->
             </div>
+
         </div>
         <div class="hero__shadow"></div>
     </div>
-    <!-- <script type="module" src="/src/main.js"></script> -->
 
 </body>
 
