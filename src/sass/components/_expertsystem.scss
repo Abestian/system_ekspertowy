@@ -1,0 +1,27 @@
+.expert-system {
+	&__title {
+		text-align: center;
+	}
+
+	&__question-area {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		border: 2px solid red;
+	}
+
+	&__question {
+		border: 2px solid green;
+	}
+
+	&__button-area {
+		border: 2px solid blue;
+	}
+
+	&__button {
+		margin-block: 0.25em;
+		padding: 0.75em;
+		width: 100%;
+		border-radius: 8px;
+	}
+}
