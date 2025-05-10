@@ -124,7 +124,6 @@ function fQuestion15() {
 	${addButton('Nie', 'fQuestion1()')}`;
 }
 
-window.fQuestion0 = fQuestion0;
 window.fQuestion1 = fQuestion1;
 window.fQuestion2 = fQuestion2;
 window.fQuestion3 = fQuestion3;
