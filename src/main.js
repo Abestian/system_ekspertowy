@@ -131,45 +131,34 @@ function fQuestion15() {
 	${addButton('Nie', 'fQuestion1()')}`;
 }
 
+const fQuestions = [
+	fQuestion1,
+	fQuestion2,
+	fQuestion3,
+	fQuestion4,
+	fQuestion5,
+	fQuestion6,
+	fQuestion7,
+	fQuestion8,
+	fQuestion9,
+	fQuestion10,
+	fQuestion11,
+	fQuestion12,
+	fQuestion13,
+	fQuestion14,
+	fQuestion15,
+];
 
+fQuestions.forEach((fn, i) => (window[`fQuestion${i + 1}`] = fn));
 
-window.fQuestion1 = fQuestion1;
-window.fQuestion2 = fQuestion2;
-window.fQuestion3 = fQuestion3;
-window.fQuestion4 = fQuestion4;
-window.fQuestion5 = fQuestion5;
-window.fQuestion6 = fQuestion6;
-window.fQuestion7 = fQuestion7;
-window.fQuestion8 = fQuestion8;
-window.fQuestion9 = fQuestion9;
-window.fQuestion10 = fQuestion10;
-window.fQuestion11 = fQuestion11;
-window.fQuestion12 = fQuestion12;
-window.fQuestion13 = fQuestion13;
-window.fQuestion14 = fQuestion14;
-window.fQuestion15 = fQuestion15;
+const globals = {
+	verdict,
+	guitarClassic,
+	guitarAcoustic,
+	guitarElectric,
+	guitarBass,
+	guitarUkulele,
+	guitarBonfire,
+};
 
-window.verdict = verdict;
-window.guitarClassic = guitarClassic;
-window.guitarAcoustic = guitarAcoustic;
-window.guitarElectric = guitarElectric;
-window.guitarBass = guitarBass;
-window.guitarUkulele = guitarUkulele;
-window.guitarBonfire = guitarBonfire;
-
-/* unused parts of code */
-
-/*
-const carouselWidth = 600;
-
-let index = 0;
-
-const changeItem = () => {
-	if (index < 2) {
-		index++;
-	}
-	sliderBox.style.transform = `translateX(${-index * carouselWidth}px)`;
-}; 
-
-window.changeItem = changeItem;
-*/
+Object.assign(window, globals);
