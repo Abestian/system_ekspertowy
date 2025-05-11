@@ -24,130 +24,130 @@ const addButton = (buttonAnswer, callFunction) => {
 	return `<button class="expert-system__button" onclick = "${callFunction}">${buttonAnswer}</button>`;
 };
 
-function fQuestion1() {
+function question1() {
 	question.innerHTML = 'Jaki jest Twój poziom doświadczenia z grą na gitarze?';
 	btnArea.innerHTML = `
-	${addButton('Początkujący', 'fQuestion2()')}
-	${addButton('Średnio zaawansowany / Zaawansowany', 'fQuestion3()')}`;
+	${addButton('Początkujący', 'question2()')}
+	${addButton('Średnio zaawansowany / Zaawansowany', 'question3()')}`;
 }
 
-function fQuestion2() {
+function question2() {
 	question.innerHTML = 'Czy zależy Ci na łatwym starcie i delikatnych strunach?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara klasyczna', guitarClassic)")} 
-	${addButton('Nie', 'fQuestion4()')}`;
+	${addButton('Nie', 'question4()')}`;
 }
 
-function fQuestion3() {
+function question3() {
 	question.innerHTML = 'Jaki rodzaj muzyki najbardziej chcesz grać?';
 	btnArea.innerHTML = `
 	${addButton('Muzyka klasyczna / Flamenco', "verdict('Gitara klasyczna', guitarClassic)")} 
 	${addButton('Rock / Metal / Punk', "verdict('Gitara elektryczna', guitarElectric)")}
-	${addButton('Jazz / Blues / Funk', 'fQuestion5()')}
-	${addButton('Pop / Folk / Indie', 'fQuestion6()')}
+	${addButton('Jazz / Blues / Funk', 'question5()')}
+	${addButton('Pop / Folk / Indie', 'question6()')}
 	${addButton('Reggae / Hawajska / Luźna', "verdict('Ukulele', guitarUkulele)")}`;
 }
 
-function fQuestion4() {
+function question4() {
 	question.innerHTML = 'Czy zależy Ci na prostym i małym instrumencie?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Ukulele', guitarUkulele)")} 
-	${addButton('Nie', 'fQuestion12()')}`;
+	${addButton('Nie', 'question12()')}`;
 }
 
-function fQuestion5() {
+function question5() {
 	question.innerHTML = 'Czy planujesz grać solówki lub improwizacje?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara elektryczna', guitarElectric)")} 
 	${addButton('Nie', "verdict('Gitara basowa', 'guitar_bass.jpg')")}`;
 }
 
-function fQuestion6() {
+function question6() {
 	question.innerHTML = 'Czy chcesz jednocześnie grać i śpiewać?';
 	btnArea.innerHTML = `
-	${addButton('Tak', 'fQuestion7()')} 
-	${addButton('Nie', 'fQuestion8()')}`;
+	${addButton('Tak', 'question7()')} 
+	${addButton('Nie', 'question8()')}`;
 }
 
-function fQuestion7() {
+function question7() {
 	question.innerHTML = 'Czy bardzo Ci zależy, aby instrument był łatwy do zabrania w podróż lub na ognisko?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara akustyczna lub ukulele', guitarBonfire)")} 
 	${addButton('Nie', "verdict('Gitara akustyczna', guitarAcoustic)")}`;
 }
 
-function fQuestion8() {
+function question8() {
 	question.innerHTML = 'Czy planujesz grać z zespołem lub występować publicznie?';
 	btnArea.innerHTML = `
-	${addButton('Tak', 'fQuestion9()')} 
-	${addButton('Nie', 'fQuestion10()')}`;
+	${addButton('Tak', 'question9()')} 
+	${addButton('Nie', 'question10()')}`;
 }
 
-function fQuestion9() {
+function question9() {
 	question.innerHTML = 'Czy wolisz być "liderem dźwięku" czy "bazą rytmiczną"?';
 	btnArea.innerHTML = `
 	${addButton('Lider', "verdict('Gitara elektryczna', guitarElectric)")} 
 	${addButton('Baza rytmiczna', "verdict('Gitara basowa', guitarBass)")}`;
 }
 
-function fQuestion10() {
+function question10() {
 	question.innerHTML = 'Czy chcesz grać muzykę instrumentalną?';
 	btnArea.innerHTML = `
-	${addButton('Tak', 'fQuestion11()')} 
-	${addButton('Nie', 'fQuestion15()')}`;
+	${addButton('Tak', 'question11()')} 
+	${addButton('Nie', 'question15()')}`;
 }
 
-function fQuestion11() {
+function question11() {
 	question.innerHTML = 'Czy interesuje Cię styl gry fingerstyle?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara klasyczna lub akustyczna', guitarClassic)")} 
 	${addButton('Nie', "verdict('Gitara elektryczna lub basowa', guitarBass)")}`;
 }
 
-function fQuestion12() {
+function question12() {
 	question.innerHTML = 'Czy chcesz używać efektów dźwiękowych i wzmacniacza?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara elektryczna', guitarElectric)")} 
-	${addButton('Nie', 'fQuestion13()')}`;
+	${addButton('Nie', 'question13()')}`;
 }
 
-function fQuestion13() {
+function question13() {
 	question.innerHTML = 'Czy zależy Ci na uniwersalnym brzmieniu, które pasuje do wielu stylów?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara akustyczna', guitarAcoustic)")} 
-	${addButton('Nie', 'fQuestion14()')}`;
+	${addButton('Nie', 'question14()')}`;
 }
 
-function fQuestion14() {
+function question14() {
 	question.innerHTML = 'Czy zależy Ci na głębokim, niskim brzmieniu?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara basowa', guitarBass)")} 
 	${addButton('Nie', "verdict('Gitara elektryczna', guitarElectric)")}`;
 }
 
-function fQuestion15() {
+function question15() {
 	question.innerHTML = 'Czy w ogóle chcesz grać na gitarze?';
 	btnArea.innerHTML = `
 	${addButton('Tak', "verdict('Gitara akustyczna', guitarAcoustic)")} 
 	${addButton('Nie', "verdict('Trąbka', trumpet)")}`;
 }
 
-const fQuestions = {
-	fQuestion1,
-	fQuestion2,
-	fQuestion3,
-	fQuestion4,
-	fQuestion5,
-	fQuestion6,
-	fQuestion7,
-	fQuestion8,
-	fQuestion9,
-	fQuestion10,
-	fQuestion11,
-	fQuestion12,
-	fQuestion13,
-	fQuestion14,
-	fQuestion15,
+const questions = {
+	question1,
+	question2,
+	question3,
+	question4,
+	question5,
+	question6,
+	question7,
+	question8,
+	question9,
+	question10,
+	question11,
+	question12,
+	question13,
+	question14,
+	question15,
 };
 
 const globals = {
@@ -161,5 +161,5 @@ const globals = {
 	trumpet,
 };
 
-Object.assign(window, fQuestions);
+Object.assign(window, questions);
 Object.assign(window, globals);
